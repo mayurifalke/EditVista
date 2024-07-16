@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Editor App</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="img">
+      <img src="images/plogo2.jpg" alt="logo">
+    </div>
+    <div class="heading">
+      <h1>Photo Editor</h1>
+    </div>
+    <div class="reset_btn">
+      <a href="#" id="reset-toggle" class="btn">Reset</a>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-edit icon'></i>
+      <div class="logo_name">Editing Tools</div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+
+    <ul class="nav-list">
+      <li>
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search...">
+        <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#" id="crop-toggle" class="btn">
+          <i class='bx bx-crop'></i>
+          <span class="links_name">Crop</span>
+        </a>
+        <span class="tooltip">Crop</span>
+      </li>
+
+      <li>
+        <a href="#" id="brightnessLink">
+          <i class='bx bx-sun'></i>
+          <span class="links_name">Brightness</span>
+      </a>
+        <span class="tooltip">Brightness</span>
+      </li>
+      <li>
+        <a href="#" id="grayscaleLink">
+          <i class='bx bx-brightness-half'></i>
+          <span class="links_name">Grayscale</span>
+      </a>
+        <span class="tooltip">Grayscale</span>
+      </li>
+      <li>
+        <a href="#" id="blurLink">
+          <i class='bx bxs-image-add' ></i>
+          <span class="links_name">Blur</span>
+      </a>
+        <span class="tooltip">Blur</span>
+      </li>
+      <li>
+        <a href="#" id="rotateLink">
+          <i class='bx bx-rotate-right'></i>
+          <span class="links_name">Rotate</span>
+      </a>
+        <span class="tooltip">Rotate</span>
+      </li>
+      <li>
+        <a href="#" id="flipHorizontalLink">
+          <i class='bx bx-reflect-horizontal'></i>
+          <span class="links_name">Flip Horizontal</span>
+      </a>
+        <span class="tooltip">Flip Horizontal</span>
+      </li>
+      <li>
+        <a href="#" id="flipVerticalLink">
+          <i class='bx bx-reflect-vertical' ></i>
+          <span class="links_name">Flip Vertical</span>
+      </a>
+        <span class="tooltip">Flip Vertical</span>
+      </li>
+      <li>
+        <a href="#" id="saveLink">
+          <i class='bx bx-save'></i>
+          <span class="links_name">Save</span>
+      </a>
+      
+        <span class="tooltip">Save</span>
+      </li>
+      <li class="profile">
+        <div class="profile-details">
+          <img src="images/mayuri_3.jpg" alt="profileImg">
+          <div class="name_job">
+            <div class="name">Mayuri Falke</div>
+            <div class="job">Web designer</div>
+          </div>
+        </div>
+        <i class='bx bx-log-out' id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+  <!-- <section class="home-section">
+        <div class="text">Dashboard</div>
+    </section> -->
+
+
+
+  <!-- Code of main content -->
+  <div class="canvas">
+
+    <div class="imgContainer">
+      <canvas id="canvas"></canvas>
+      <input type="range" min="0" max="200" value="100" class="slider" id="brightnessSlider">
+      <input type="range" min="0" max="10" value="0" id="blurSlider" style="display:none;">
+
+      <input type="range" min="0" max="360" value="0" id="effectSlider" style="display:none;">
+      <p>Drag or Upload Your Own Image</p>
+      <label for="upload" id="button">Open Image</label>
+
+      <input type="file" id="upload" accept="image/*">
+    </div>
+  </div>
+ 
+  <script src="Script.js"></script>
+</body>
+
+</html>
